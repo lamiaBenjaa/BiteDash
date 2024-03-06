@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import img from '../assets/home2.jpg'
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { MdAccessTimeFilled } from "react-icons/md";
 
 export default function BodyHome() {
 
@@ -11,7 +13,7 @@ export default function BodyHome() {
         style={{backgroundImage:`url(${img})`}}>
             <div className='text-center text-5xl font-bold px-80 py-10 text-yellow-50'>
             "Indulge in moments of flavor, where every bite tells a delicious story"</div>
-            <div className='text-center text-m px-56 text-grey-700 font-serif'>
+            <div className='text-center text-m px-56 text-grey-700 font-serif italic text-yellow-50'>
             "Savor the world on a plate! Our fast food creations are a delicious 
             snapshot of global flavors, crafted with love and served just for you. 
             Taste the journey at LaMiaFood ;
@@ -19,35 +21,167 @@ export default function BodyHome() {
             </div>
         </div>
         <div className='w-[80%] h-56 absolute bg-white bottom-[-10%] rounded-3xl shadow-2xl shadow-orange-300 '>
-            <div className='flex justify-between items-center'> 
-              <div className='px-8 py-4 space-x-9 flex items-center'>
-                <button onClick={()=>{setNavActive('Filter')}} 
-                className={`${navActive === 'Filter' ? 'py-2 px-10 border-b-4 border-black' : 'py-2 px-10 border-b-4 border-gray-300'  }`}>
-                    Filter by 
+          <div>
+            <div className='flex text-lg text-gray-400 font-medium px-6 py-2'>
+                <button onClick={()=>setNavActive('Filter')} className={`${navActive == 'Filter'? 'border-b-2 border-black px-12 py-2 text-black' : 'border-b-2 border-gray-400 px-12 py-2'}`}>
+                   Filter By
                 </button>
-                <button onClick={()=>{setNavActive('Discounts')}} 
-                className={`${navActive === 'Discounts' ? 'py-2 px-10 border-b-4 border-black' : 'py-2 px-10 border-b-4 border-gray-300'}`}>
-                    Discounts 
+                <button onClick={()=>setNavActive('Discounts')} className={`${navActive == 'Discounts' ? 'border-b-2 border-black px-12 py-2 text-black' : 'border-b-2 border-gray-400 px-12 py-2' }`}>
+                   Discounts
                 </button>
-                <button onClick={()=>{setNavActive('Reservation')}} 
-                className={`${navActive === 'Reservation ' ? 'py-2 px-10 border-b-4 border-black' : 'py-2 px-10 border-b-4 border-gray-300'}`}>
-                    Reservation 
+                <button onClick={()=>setNavActive('Order')} className={`${navActive == 'Order' ? 'border-b-2 border-black px-12 py-2 text-black' : 'border-b-2 border-gray-400 px-12 py-2'}`}>
+                   Order Now
                 </button>
+                <button onClick={()=>setNavActive('Explore')} className={`${navActive == 'Explore' ? 'border-b-2 border-black px-12 py-2 text-black' : 'border-b-2 border-gray-400 px-12 py-2'}`}>
+                  Explore
+                </button>
+            </div>
+          
+             <div className={`${navActive == 'Filter' ? 'flex justify-between px-16 items-center' : 'hidden'}`}>
+               <div className='flex justify-center space-x-24  py-4'>
+
+                <div>
+                   <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                      <FaMapMarkerAlt />
+                      <h1>Destination</h1>
+                   </div>
+                      <input className='bg-orange-400 text-white text-lg rounded-lg ' type='text' placeholder='Your Destination ...'/>
+                </div>
+                 
+                <div>
+                   <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                    <MdAccessTimeFilled />
+                    <h1>Order</h1>
+                   </div>
+                     <input className='bg-orange-400 text-white text-lg rounded-lg'  type='datetime-local' placeholder='ghsg'/>
+               </div>
+                   
+               <div> 
+                   <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                    <MdAccessTimeFilled />
+                    <h1>Dilvery</h1>
+                   </div>
+                     <input className='bg-orange-400 text-white text-lg rounded-lg ' type='datetime-local' />
+                </div>
+
               </div>
-              <div className='pr-9 '>
-                <button className='w-28 h-9 text-white font-bold rounded-2xl text-center bg-orange-400'>Search</button>
+
+              <div >
+                <button className='bg-orange-400 text-white font-medium text-lg rounded-2xl w-24 h-9'>
+                  Search
+                </button>
               </div>
             </div>
 
-            <div className={`${navActive === 'Filter' ? 'flex items-center':'hidden'}`}>
-               filter
-            </div>
-            <div className={`${navActive === 'Discounts' ? 'flex items-center':'hidden'}`}>
-               discounts
-            </div>
-            <div className={`${navActive === 'Reservation' ? 'flex items-center' : 'hidden'}`}>
-                reservation
-            </div>
+             <div className={`${navActive == 'Discounts' ? 'flex items-center justify-between px-16' : 'hidden'}`}>
+              <div className='flex justify-center space-x-24  py-4'>
+
+               <div>
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                     <FaMapMarkerAlt />
+                     <h1>Destination</h1>
+                  </div>
+                     <input className='bg-orange-400 text-white text-lg rounded-lg ' type='text' placeholder='Your Destination ...'/>
+               </div>
+                
+               <div>
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                   <MdAccessTimeFilled />
+                   <h1>Order</h1>
+                  </div>
+                    <input className='bg-orange-400 text-white text-lg rounded-lg'  type='datetime-local' placeholder='ghsg'/>
+               </div>
+                  
+               <div> 
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                   <MdAccessTimeFilled />
+                   <h1>Dilvery</h1>
+                  </div>
+                    <input className='bg-orange-400 text-white text-lg rounded-lg ' type='datetime-local' />
+               </div>
+               
+              </div>
+
+               <div >
+                 <button className='bg-orange-400 text-white font-medium text-lg rounded-2xl w-24 h-9'>
+                  Search
+                  </button>
+               </div>
+
+              </div>
+
+             <div className={`${navActive == 'Order' ? 'flex items-center justify-between px-16' : 'hidden'}`}>
+                       <div className='flex justify-center space-x-24  py-4'>
+
+               <div>
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                     <FaMapMarkerAlt />
+                     <h1>Destination</h1>
+                  </div>
+                     <input className='bg-orange-400 text-white text-lg rounded-lg ' type='text' placeholder='Your Destination ...'/>
+               </div>
+                
+               <div>
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                   <MdAccessTimeFilled />
+                   <h1>Order</h1>
+                  </div>
+                    <input className='bg-orange-400 text-white text-lg rounded-lg'  type='datetime-local' placeholder='ghsg'/>
+               </div>
+                  
+               <div> 
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                   <MdAccessTimeFilled />
+                   <h1>Dilvery</h1>
+                  </div>
+                    <input className='bg-orange-400 text-white text-lg rounded-lg ' type='datetime-local' />
+               </div>
+               
+              </div>
+
+               <div >
+                 <button className='bg-orange-400 text-white font-medium text-lg rounded-2xl w-24 h-9'>
+                  Search
+                  </button>
+               </div>
+             </div>
+
+             <div className={`${navActive == 'Explore' ? 'flex items-center justify-between px-16' : 'hidden'}`}>
+             <div className='flex justify-center space-x-24  py-4'>
+
+               <div>
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                     <FaMapMarkerAlt />
+                     <h1>Destination</h1>
+                  </div>
+                     <input className='bg-orange-400 text-white text-lg rounded-lg ' type='text' placeholder='Your Destination ...'/>
+               </div>
+                
+               <div>
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                   <MdAccessTimeFilled />
+                   <h1>Order</h1>
+                  </div>
+                    <input className='bg-orange-400 text-white text-lg rounded-lg'  type='datetime-local' placeholder='ghsg'/>
+               </div>
+                  
+               <div> 
+                  <div className='flex flex-row space-x-3 px-5 py-2 font-medium text-lg'>
+                   <MdAccessTimeFilled />
+                   <h1>Dilvery</h1>
+                  </div>
+                    <input className='bg-orange-400 text-white text-lg rounded-lg ' type='datetime-local' />
+               </div>
+               
+               </div>
+               
+               <div >
+                 <button className='bg-orange-400 text-white font-medium text-lg rounded-2xl w-24 h-9'>
+                  Search
+                  </button>
+               </div>
+             </div>
+          </div>
         </div>
      </div>
     </>
