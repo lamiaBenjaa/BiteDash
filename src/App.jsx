@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import SignIn from "./pages/SignIn";
 import SingUp from "./pages/SingUp";
 import About from "./pages/About";
+import Panier from "./pages/Panier";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/Explore" element={<Explore/>}/>
         <Route path="/Contact" element={<Contact/>}/>
         <Route path="/About" element={<About/>}/>
+        <Route path="/Panier" element={<Panier/>}/>
         <Route path="/SignIn" element={<SignIn/>}/>
         <Route path="/SingUp" element={<SingUp/>}/>
       </Routes>

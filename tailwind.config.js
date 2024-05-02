@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        strong:['Merienda'],
+        horror:['Creepster'],
+        normal:['Roboto Slab']
+      }
+    },
   },
   plugins: [],
 }
