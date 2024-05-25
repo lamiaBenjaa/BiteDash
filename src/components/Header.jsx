@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from './../assets/logo.png'
+import logo from './../assets/loo.png'
 import { Link, useLocation } from 'react-router-dom'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
@@ -17,9 +17,13 @@ export default function Header() {
   return (
     <nav className='px-8 py-4 lg:px-24 w-full m-auto shadow-md shadow-gray-950 md:flex md:justify-between md:items-center'>
       <div className='flex justify-between items-center'>
-        <Link to='/'><img className='w-36 pr-5' src={logo} alt='logo' /></Link>
+        <Link to='/'><img className=' w-48 pr-5' src={logo} alt='logo' /></Link>
         <div className='flex space-x-7'>
-         <Link to='/Panier'><p className='flex md:hidden text-center'><MdOutlineAddShoppingCart     className='text-3xl  text-gray-200'/></p></Link>
+         <Link to='/Panier'>
+          <p className='flex md:hidden text-center relative'><MdOutlineAddShoppingCart     className='text-3xl  text-gray-200'/>
+          <p className='text-white absolute bottom-7 left-6 bg-orange-500 rounded-full w-3 h-3'></p>
+          </p>
+          </Link>
         <span onClick={()=>Menu()} className='md:hidden cursor-grab'>{menu ? <HiMenuAlt3 className='text-4xl text-orange-400' /> : <IoClose className='text-4xl text-orange-400' /> }</span>
         </div>
       </div>
@@ -32,7 +36,9 @@ export default function Header() {
         <li><Link to='/Contact' className={`${location.pathname === '/Contact' ? 'text-gray-50 border-b-4 border-gray-50' : 'text-gray-300 hover:text-orange-400  hover:border-b-4 border-orange-400 duration-200 '}`}>Contact</Link></li>
         </div>
         <div className='md:flex justify-between items-center space-x-8 '>
-             <Link to='/Panier'><p className='hidden md:flex text-center'><MdOutlineAddShoppingCart     className='text-3xl text-gray-200'/></p></Link>
+             <Link to='/Panier'><p className='hidden md:flex text-center relative'><MdOutlineAddShoppingCart     className='text-3xl text-gray-200'/>
+             <p className='text-white absolute bottom-7 left-6 bg-orange-500 rounded-full w-3 h-3'></p>
+             </p></Link>
             <Link to='/SignUp'><button className='bg-orange-500 w-32 border-orange-300 ring-orange-200 py-1 rounded-sm  text-gray-100 text-lg '>Sign Up</button></Link>
         </div>
       </ul>

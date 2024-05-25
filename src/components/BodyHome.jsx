@@ -1,5 +1,5 @@
 import React from 'react'
-import img from './../assets/l.png'
+import img from './../assets/2.png'
 import img1 from './../assets/b.png'
 import { motion } from 'framer-motion'
 import { LuArrowBigRightDash } from "react-icons/lu";
@@ -7,7 +7,7 @@ import { LuArrowBigRightDash } from "react-icons/lu";
 export default function BodyHome() {
   return (
     <div >
-       <div className='grid md:grid-cols-2 sm:py-0  md:py-14 2xl:py-0'>
+       <div className='grid bg-gradient-to-t from-gray-900 via-orange-950 to-gray-900  md:grid-cols-5 sm:py-0  md:mt-10 2xl:py-0 '>
          <div className='md:hidden'>
             <img src={img1} alt="" className='h-[200px] w-full '/>
          </div>
@@ -23,15 +23,15 @@ export default function BodyHome() {
             transition={{
                duration:1
             }}
-          className='text-center space-y-2 w-[95%] lg:w-[80%] m-auto'>
+          className='text-center space-y-2 p-10 m-auto md:col-span-3'>
               <h1 className=' font-horror md:text-5xl text-6xl lg:text-6xl xl:7xl 2xl:text-8xl text-gray-10 drop-shadow-2xl shadow-gray-100'>Eat Your <span className='text-clip text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-700 to-orange-400'> favorite Food </span> how You like it!</h1>
               <p className='text-xl text-orange-400'>"Fast Flavors Satisfy Cravings, ASAP!"</p>
-              <p className='text-lg text-gray-100 pb-4'>"Welcome to LaMiaFood Where Fast Food Meets Flavor!
+              <p className='text-lg text-gray-100 pb-4 px-16'>"Welcome to BiteDash Where Fast Food Meets Flavor!
                   Dive into a world of culinary delight where every bite
                   is a journey of taste sensations. Whether you're craving
-                  crispy fries, juicy burgers, or mouthwatering
+                  crispy fries, juicy burgers, or mouthwatering.
                </p>
-               <button className='flex justify-center items-center mx-auto my-5 bg-orange-500 w-[25%] md:w-[50%] xl:w-[25%] py-1 rounded-sm text-lg'><LuArrowBigRightDash /><p> Order Now</p></button>
+               <button className='flex justify-center items-center mx-auto my-5 bg-orange-600 w-[25%] md:w-[50%] xl:w-[25%] py-2 rounded-sm text-xl'><LuArrowBigRightDash /><p> Order Now</p></button>
           </motion.div>
           <motion.div
            initial={{
@@ -45,20 +45,22 @@ export default function BodyHome() {
             transition={{
                duration:1
             }}
-          className='w-full hidden md:flex'>
+            whileHover={{
+               scale:1.01
+              }}
+          className='w-full hidden md:flex relative'>
                 <motion.img
                  animate={{
-                  rotateZ:180
+                  rotateZ:0
                  }}
                  transition={{
                   // repeat:Infinity,
                   // repeatType:'mirror',
                   duration:1,
                  }}
-                 whileHover={{
-                  scale:1.025
-                 }}
-                src={img} alt=""   className='lg:w-[90%] w-full drop-shadow-2xl shadow-gray-100'/>
+                 
+                src={img} alt=""   className='col-span-2  pt-16 min-w-80 lg:min-w-[400px] xl:min-w-[580px] m-auto max-h-[100vh] cursor-pointer w-full drop-shadow-2xl shadow-gray-100 '/>
+                <p className='absolute md:bottom-14 md:left-56 lg:bottom-8 lg:left-[300px] xl:left-[400px] ring-4 ring-orange-500 bg-orange-600 xl:text-4xl text-2xl font-bold  text-center rounded-full xl:p-5 md:p-3 w-20 xl:w-32 shadow-gray-950 shadow-2xl'>30% Offre</p>
           </motion.div>
        </div>
     </div>

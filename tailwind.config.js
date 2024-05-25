@@ -9,7 +9,8 @@ export default {
       fontFamily:{
         strong:['Merienda'],
         horror:['Creepster'],
-        normal:['Roboto Slab']
+        normal:['Roboto Slab'],
+        rubik:['Rubik']
       }
     },
   },
