@@ -6,8 +6,8 @@ import { LuArrowBigRightDash } from "react-icons/lu";
 
 export default function BodyHome() {
   return (
-    <div >
-       <div className='grid bg-gradient-to-t from-gray-900 via-orange-950 to-gray-900  md:grid-cols-5 sm:py-0  md:mt-10 2xl:py-0 '>
+    <div className='bg-gradient-to-t from-gray-900 via-orange-950 to-gray-900'>
+       <div className='w-[90%] m-auto grid   md:grid-cols-5 sm:py-0  md:mt-10 2xl:py-0  '>
          <div className='md:hidden'>
             <img src={img1} alt="" className='h-[200px] w-full '/>
          </div>
@@ -59,7 +59,7 @@ export default function BodyHome() {
                   duration:1,
                  }}
                  
-                src={img} alt=""   className='col-span-2  pt-16 min-w-80 lg:min-w-[400px] xl:min-w-[580px] m-auto max-h-[100vh] cursor-pointer w-full drop-shadow-2xl shadow-gray-100 '/>
+                src={img} alt=""   className='col-span-2  pt-16 min-w-80 lg:min-w-[400px] xl:min-w-[580px] max-h-[100vh] cursor-pointer w-full drop-shadow-2xl shadow-gray-100'/>
                 <p className='absolute md:bottom-14 md:left-56 lg:bottom-8 lg:left-[300px] xl:left-[400px] ring-4 ring-orange-500 bg-orange-600 xl:text-4xl text-2xl font-bold  text-center rounded-full xl:p-5 md:p-3 w-20 xl:w-32 shadow-gray-950 shadow-2xl'>30% Offre</p>
           </motion.div>
        </div>
