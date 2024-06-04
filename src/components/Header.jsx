@@ -31,7 +31,7 @@ export default function Header() {
       <ul className={`${menu ? style2 : style}}`}>
         <div className='md:inline-flex md:space-x-5 lg:space-x-8 xl:space-x-16 mx-8 md:mx-0 space-y-10 ms:space-y-0 md:space-y-0 text-xl py-10 md:py-0'>
          <li><Link to='/' className={`${location.pathname === '/' ? 'text-gray-50 border-b-4 border-gray-50' : 'text-gray-300 hover:text-orange-400  hover:border-b-4 border-orange-400 duration-200  '}`}>Home</Link></li>
-        <li><Link to='/Explore' className={`${location.pathname === '/Explore' ? 'text-gray-50 border-b-4 border-gray-50' : 'text-gray-300 hover:text-orange-400 hover:border-b-4 border-orange-400 duration-200 '}`}>Explore</Link></li>
+        <li><Link to='/Explore' className={`${location.pathname === '/Explore' ? 'text-gray-50 border-b-4 border-gray-50' : 'text-gray-300 hover:text-orange-400 hover:border-b-4 border-orange-400 duration-200 '}`}>Menu</Link></li>
         <li><Link to='/About' className={`${location.pathname === '/About' ? 'text-gray-50 border-b-4 border-gray-50' : 'text-gray-300 hover:text-orange-400 hover:border-b-4 border-orange-400 duration-200 '}`}>About </Link></li>
         <li><Link to='/Contact' className={`${location.pathname === '/Contact' ? 'text-gray-50 border-b-4 border-gray-50' : 'text-gray-300 hover:text-orange-400  hover:border-b-4 border-orange-400 duration-200 '}`}>Contact</Link></li>
         </div>

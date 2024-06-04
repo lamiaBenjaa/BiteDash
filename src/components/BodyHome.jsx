@@ -1,12 +1,13 @@
 import React from 'react'
 import img from './../assets/try.png'
 import img1 from './../assets/b.png'
+import img3 from './../assets/02.png'
 import { motion } from 'framer-motion'
 import { LuArrowBigRightDash } from "react-icons/lu";
 
 export default function BodyHome() {
   return (
-    <div className='bg-gradient-to-t from-gray-900 via-orange-950 to-gray-900 h-full mt-10 '>
+    <div className=' h-[85vh] mt-1 pt-16 bg-cover bg-no-repeat' style={{backgroundImage:`url(${img3})`}}>
        <div className='w-full min-h-[60vh]  m-auto grid   md:grid-cols-2 sm:py-0     '>
          <div className='md:hidden'>
             <img src={img1} alt="" className='h-[200px] w-full '/>
@@ -23,9 +24,9 @@ export default function BodyHome() {
             transition={{
                duration:1
             }}
-          className='text-center space-y-2 pl-3 md:mt-10  m-auto md:col-span-1 xl:mt-20'>
+          className='text-center space-y-6 pl-8 md:mt-10  m-auto md:col-span-1 xl:mt-20 '>
               <h1 className=' font-horror md:text-5xl text-6xl lg:text-7xl 2xl:text-8xl text-gray-10 drop-shadow-2xl shadow-gray-100'>Eat Your <span className='text-clip text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-700 to-orange-400'> favorite Food </span> how You like it!</h1>
-              <p className='text-xl text-orange-400'>"Fast Flavors Satisfy Cravings, ASAP!"</p>
+              <p className='text-xl text-yellow-700'>"Fast Flavors Satisfy Cravings, ASAP!"</p>
               <p className='text-lg text-gray-100 pb-4 px-10'>"Welcome to BiteDash Where Fast Food Meets Flavor!
                   Dive into a world of culinary delight where every bite
                   is a journey of taste sensations. Whether you're craving
@@ -49,7 +50,7 @@ export default function BodyHome() {
                scale:1.01
               }}
           className='w-full hidden md:flex relative '>
-                <motion.img
+                {/* <motion.img
                  animate={{
                   rotateZ:0
                  }}
@@ -59,8 +60,8 @@ export default function BodyHome() {
                   duration:1,
                  }}
                  
-                src={img} alt=""   className='col-span-2 mt-16 min-w-80 lg:min-w-[400px] xl:min-w-[560px] max-h-[100vh] cursor-pointer  pr-8 w-full drop-shadow-2xl shadow-gray-100'/>
-                <p className='absolute md:top-14 md:left-44 lg:left-[280px] xl:left-[400px] ring-2 ring-orange-500 bg-orange-600 xl:text-3xl text-2xl font-bold  text-center rounded-full xl:p-4 md:p-3 w-20 xl:w-28 shadow-gray-950 shadow-2xl'>30% Offre</p>
+                src={img} alt=""   className='col-span-2 mt-16 min-w-80 lg:min-w-[400px] xl:min-w-[560px] max-h-[100vh] cursor-pointer  pr-8 w-full drop-shadow-2xl shadow-gray-100'/> */}
+                {/* <p className='absolute md:top-14 md:left-44 lg:left-[280px] xl:left-[500px] ring-2 ring-orange-500 bg-orange-600 xl:text-4xl text-2xl font-bold  text-center rounded-full xl:p-4 md:p-3 w-20 xl:w-28 shadow-gray-950 shadow-2xl'>30% Offre</p> */}
           </motion.div>
        </div>
     </div>

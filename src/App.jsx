@@ -7,6 +7,7 @@ import SignIn from "./pages/SignIn";
 import SingUp from "./pages/SingUp";
 import About from "./pages/About";
 import Panier from "./pages/Panier";
+import RestaurantDetails from "./components/RestaurantDetails";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/Panier" element={<Panier/>}/>
         <Route path="/SignIn" element={<SignIn/>}/>
         <Route path="/SingUp" element={<SingUp/>}/>
+        <Route path="/RestaurantDetails/:id" element={<RestaurantDetails/>}/>
       </Routes>
     </BrowserRouter>
   )
