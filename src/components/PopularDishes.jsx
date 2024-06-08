@@ -36,6 +36,13 @@ export default function PopularDishes() {
     if (error) {
         return <div className='flex justify-center items-center my-10 text-xl text-orange-200'>Error: {error.message}</div>;
     }
+
+
+
+    const Add= async()=>{
+         await axios.post('http://127.0.0.1:8000/api/orderItems')
+    }
+
   return (
     <>
     <h1 className='mt-16 text-5xl font-extrabold px-10'>Popular Dishes</h1>
@@ -54,7 +61,7 @@ export default function PopularDishes() {
                          <div className='flex justify-between items-center px-5 space-x-2 mt-3'>
                          <p className=' text-gray-300 font-semibold px-2 pt-2 text-lg'><p className='text-orange-600 inline'>{item.price} $</p></p>
                             <div className='  flex space-x-1 text-gray-300 py-1 rounded-md'>
-                                <p><IoMdAddCircle  className='text-2xl text-orange-600 bg-gray-300 rounded-full'/></p>
+                                <p onClick={()=>Add()}><IoMdAddCircle  className='text-2xl text-orange-600 cursor-pointer bg-gray-300 rounded-full'/></p>
                             </div>
                          </div>
                         <div className='absolute right-8 top-4 flex justify-center items-center bg-gray-500 px-1 py-1 rounded-lg'>

@@ -5,6 +5,7 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 import res from './../assets/res.jpg'
 import bur from './../assets/bur.jpg'
 import del from './../assets/Del.jpg'
+import { Link } from 'react-router-dom';
 
 export default function HowItWork() {
   return (
@@ -15,13 +16,15 @@ export default function HowItWork() {
     </div>
     <div className='grid grid-cols-3 my-10 bg-gradient-to-t from-gray-900 via-orange-950 to-gray-900 px-36'>
 
-        <div className='text-center space-y-8 bg-gray-700 bg-opacity-25 w-[80%] m-auto py-10 rounded-lg shadow-md shadow-gray-950 cursor-pointer'>
+       <Link to='/Restaurant'>
+       <div className='text-center space-y-8 bg-gray-700 bg-opacity-25 w-[80%] m-auto py-10 rounded-lg shadow-md shadow-gray-950 cursor-pointer'>
             <div className='flex justify-center items-center'>
               {/* <GrRestaurant className='text-9xl text-orange-600'/> */}
               <img src={res} alt="" className='w-56 h-56 object-cover rounded-full shadow-md shadow-gray-950'/>
             </div>
             <p className='text-5xl font-horror w-[70%] m-auto'>Choose a Restaurant</p>
         </div>
+       </Link> 
 
         <div className='text-center space-y-8 bg-gray-700 bg-opacity-25 w-[80%] m-auto py-10 rounded-lg shadow-md shadow-gray-950 cursor-pointer'>
             <div className='flex justify-center items-center'>
